@@ -1,0 +1,96 @@
+<div id="menuScreen" class="screen active">
+  <h1>Multi-Player Tic Tac Toe</h1>
+  <p class="subtitle">Choose a mode</p>
+
+  <div class="menu-buttons">
+    <button class="mode-btn" data-players="2">2 Player Mode</button>
+    <button class="mode-btn" data-players="3">3 Player Mode</button>
+    <button class="mode-btn" data-players="4">4 Player Mode</button>
+  </div>
+</div>
+
+<div id="settingsScreen" class="screen">
+  <h1>Game Settings</h1>
+  <p id="settingsModeText" class="subtitle"></p>
+
+  <div class="settings-card">
+    <label>
+      Board Size
+      <input id="boardSizeInput" type="number" min="3" max="10" value="6" />
+    </label>
+
+    <label>
+      In a Row to Win
+      <input id="winLengthInput" type="number" min="3" max="10" value="4" />
+    </label>
+
+    <label>
+      Full Rounds Until Shields Regenerate
+      <input id="shieldIntervalInput" type="number" min="0" max="50" value="3" />
+    </label>
+
+    <label>
+      Max Shields Usable Per Turn
+      <input id="maxShieldsPerTurnInput" type="number" min="1" max="50" value="1" />
+    </label>
+
+    <label>
+      Overtime Seconds Per Move
+      <input id="overtimeSecondsInput" type="number" min="1" max="60" value="5" />
+    </label>
+
+    <label>
+      Main Game Seconds Per Move
+      <input id="mainGameSecondsInput" type="number" min="1" max="300" value="30" />
+    </label>
+
+    <label class="checkbox-row">
+      <input id="shieldsOffInput" type="checkbox" />
+      <span>Shields Off</span>
+    </label>
+
+    <div class="settings-buttons">
+      <button id="backToModeSelect">Back</button>
+      <button id="startGameBtn">Start Game</button>
+    </div>
+  </div>
+</div>
+
+<div id="gameScreen" class="screen">
+  <div class="top-row">
+    <button id="backToMenuBtn">Back to Menu</button>
+    <h1 id="gameTitle">Tic Tac Toe</h1>
+  </div>
+
+  <p id="status">Turn: X</p>
+
+  <div id="infoPanel">
+    <div id="shieldInfoBox">
+      <div id="shields"></div>
+      <div id="shieldCountdown"></div>
+      <div id="turnShieldUsage"></div>
+      <div id="moveTimer"></div>
+      <div id="overtimeTimer"></div>
+    </div>
+
+    <div id="overtimePlayersBox">
+      <div class="box-title">Symbols Remaining</div>
+      <div id="overtimePlayers"></div>
+    </div>
+  </div>
+
+  <div id="boardWrap">
+    <div id="boardGlow"></div>
+    <div id="board"></div>
+  </div>
+
+  <div id="logBox">
+    <div class="box-title">Game Log</div>
+    <div id="logList"></div>
+  </div>
+
+  <div class="game-buttons">
+    <button id="enterOvertimeBtn" class="hidden">Enter Overtime?</button>
+    <button id="restart">Restart Game</button>
+  </div>
+</div>
